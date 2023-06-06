@@ -1,0 +1,39 @@
+<div class="shadow p-3 bg-body rounded w-50 mx-auto my-4">
+  <span class="p-3">
+    Check in : <input type="date" id="check_in" ng-model="check_in" ng-change="changeDate()"/>
+  </span>
+  <span class="p-3">
+    Check out : <input type="date" id="check_out" ng-model="check_out" ng-change="changeDate()"/>
+  </span>
+  <span class="p-3">
+    City :
+    <select ng-model="city">
+      <option value="">All</option>
+      <option value="surat">Surat</option>
+      <option value="ahmedabad">Ahmedabad</option>
+    </select>
+  </span>
+</div>
+
+  <div
+    class="shadow p-3 bg-body rounded w-75 mx-auto my-4 d-flex align-items-center"
+    ng-repeat="hotels in hotelsData | filter : city "
+  >
+    <div class="p-3 ">
+      <img
+        src="{{hotels.himages}}"
+        alt="hotel img"
+        width="150px"
+        height="150px"
+      />
+    </div>
+    <div class="p-3">
+      <h4 class="p-3"><b>{{hotels.hname}}</b></h4>
+      <div class="p-3">{{hotels.hdetails}}</div>
+      <div class="p-3"><b>Address : </b> {{hotels.haddress}}</div>
+    </div>
+    <span>
+      <a href="#!hotel" class="btn btn-success" ng-click="hotelInfo(hotels._id)"><b>{{hotels.hprice}}</b></a>
+    </span>
+  </div>
+

@@ -1,0 +1,44 @@
+<div class="shadow p-3 bg-body rounded mx-auto my-5" style="width: 500px;">
+    <div class="text-center h2 my-2 mx-5 ">Signup <hr></div>
+    <div class="col">
+        <p class="text-danger mx-5">{{signup_err}}</p>
+        <form class="form mx-5">
+          <div class="row mb-3 ">
+            <div class="col">
+              <label class="mb-2">Full Name</label>
+              <input type="text" ng-model="name" class="form-control" required />
+            </div>  
+          </div>          
+          <div class="row mb-3 ">
+            <div class="col">
+              <label class="mb-2">Email</label>
+              <input type="email" ng-model="email" class="form-control" required />
+            </div>            
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2">phone</label>
+              <input type="number"  ng-model="phone" class="form-control" required />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2">Password</label>
+              <input type="password" ng-model="password" class="form-control" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label class="mb-2">confirm Password</label>
+              <input type="password" ng-model="cpassword" class="form-control" required />
+            </div>
+          </div>
+          <div ng-click="sendSignUpReq()" class="btn btn-secondary mt-3 w-100"> Sign Up </div>
+
+          <p class="text-center mt-3">
+            <a href="#!login">Alredy Have an Account ?</a>
+          </p>
+
+        </form>
+      </div>
+</div>

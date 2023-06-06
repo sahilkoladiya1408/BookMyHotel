@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@300"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/BookMyHotel.png" />
+    <script src="./angular.min.js"></script>
+    <script src="./angular.route.min.js"></script>
+    <script src="./module/app.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Book My Hotel</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-light print_none"
+      style="
+        background-color: rgba(191, 213, 253, 0.223);
+        justify-content: center;
+      "
+    >
+      <div
+        class="container"
+        style="margin: 0px 50px; justify-content: space-between"
+      >
+        <div>
+          <a class="navbar-brand align-text-center" href="#">
+            <img
+              src="./assets/BookMyHotel.png"
+              alt="logo"
+              width="50"
+              height="50"
+            />
+            <b> BookMyHotel </b>
+          </a>
+        </div>
+        <div style="font-size: 18px">
+          <a class="me-3" href="#!"><b>Home</b></a>
+          <a ng-show="auth.isAuth" href="#!" ng-click="logout()"
+            ><b>Logout</b></a
+          >
+          <a ng-show="!auth.isAuth" href="#!login"><b>Login/signup</b></a>
+        </div>
+      </div>
+    </nav>
+
+    <div ng-view></div>
+
+    <footer
+      class="py-3 print_none"
+      style="background-color: rgba(191, 213, 253, 0.223)"
+    >
+      <p class="text-center m-0">Copyright &copy; Book My Hotel</p>
+      <p class="text-center">Developed by Mohit & Sahil</p>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<div class="shadow p-3 bg-body rounded" style="width: 30rem; margin: 60px auto 138px auto;">
+    <div class="text-center h2 my-2 mx-5 ">Login <hr></div>
+    <div class="col">
+        <p class="text-danger mx-5">{{login_err}}</p>
+        <form class="form mx-5">
+          <div class="row mb-3 ">
+            <div class="col">
+              <label class="mb-2">Email</label>
+              <input
+                type="email"
+                ng-model="email"
+                class="form-control"
+                required
+              />
+            </div>            
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label class="mb-2">Password</label>
+              <input
+                type="password"
+                ng-model="password"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div ng-click="sendLoginReq()" class="btn btn-secondary mt-3 w-100">
+            Login
+          </div>
+
+          <p class="text-center mt-3">
+            <a href="#!signup">Click Here for signup ?</a>
+          </p>
+
+        </form>
+      </div>
+</div>
